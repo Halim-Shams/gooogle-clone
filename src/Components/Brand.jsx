@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Brand = () => {
+const Brand = ({fontMd, fontSm, font}) => {
 	return (
-		<p className='text-7xl md:text-8xl font-bold text-yellow-400'>
+		<p
+			className={`${fontMd ? fontMd : 'md:text-8xl'} ${
+				font ? font : 'text-7xl'
+			} ${fontSm ? fontSm : null} font-bold text-yellow-400`}>
 			Seek<span className='text-gray-600 font-thin'>_</span>
 		</p>
 	);
